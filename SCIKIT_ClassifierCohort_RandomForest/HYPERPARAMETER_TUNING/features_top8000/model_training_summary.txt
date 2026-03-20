@@ -1,0 +1,105 @@
+================================================================================
+RANDOM FOREST MODEL TRAINING SUMMARY
+================================================================================
+
+DATASET INFORMATION
+--------------------------------------------------------------------------------
+Total samples:        236
+Total features:       8000
+Number of classes:    8
+Class distribution:   {np.int64(1): np.int64(27), np.int64(2): np.int64(61), np.int64(3): np.int64(55), np.int64(4): np.int64(16), np.int64(5): np.int64(13), np.int64(6): np.int64(20), np.int64(7): np.int64(15), np.int64(8): np.int64(29)}
+
+NESTED CROSS-VALIDATION RESULTS (5-Fold)
+--------------------------------------------------------------------------------
+accuracy...................... 0.9027 ± 0.0337
+balanced_accuracy............. 0.9253 ± 0.0339
+f1_score...................... 0.9018 ± 0.0334
+precision..................... 0.9101 ± 0.0326
+recall........................ 0.9027 ± 0.0337
+roc_auc....................... 0.9802 ± 0.0111
+mcc........................... 0.8843 ± 0.0408
+kappa......................... 0.8828 ± 0.0407
+best_cv_score................. 0.9159 ± 0.0069
+
+FINAL MODEL HYPERPARAMETERS
+--------------------------------------------------------------------------------
+Selected from Fold 3 (best balanced accuracy)
+
+n_estimators.................. 1000
+min_samples_split............. 5
+min_samples_leaf.............. 1
+min_impurity_decrease......... 0.01
+max_leaf_nodes................ 50
+max_features.................. 0.3
+max_depth..................... 10
+criterion..................... entropy
+class_weight.................. None
+bootstrap..................... True
+
+FINAL MODEL OOB PERFORMANCE
+--------------------------------------------------------------------------------
+OOB Score (sklearn):     0.8983
+OOB Samples evaluated:   236/236
+Accuracy:                0.8983
+Balanced Accuracy:       0.9205
+F1 Score (weighted):     0.8975
+Precision (weighted):    0.8995
+Recall (weighted):       0.8983
+ROC AUC (weighted):      0.9785
+MCC:                     0.8778
+Cohen's Kappa:           0.8774
+
+FINAL MODEL CLASSIFICATION REPORT (OOB)
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+       FCD1A       0.91      0.78      0.84        27
+       FCD2A       0.85      0.90      0.87        61
+       FCD2B       0.83      0.82      0.83        55
+       FCD3A       1.00      1.00      1.00        16
+       FCD3B       1.00      1.00      1.00        13
+       FCD3C       0.95      1.00      0.98        20
+       FCD3D       1.00      0.87      0.93        15
+          PM       0.94      1.00      0.97        29
+
+    accuracy                           0.90       236
+   macro avg       0.94      0.92      0.93       236
+weighted avg       0.90      0.90      0.90       236
+
+FINAL MODEL CONFUSION MATRIX (OOB)
+--------------------------------------------------------------------------------
+       FCD1A  FCD2A  FCD2B  FCD3A  FCD3B  FCD3C  FCD3D  PM
+FCD1A     21      4      2      0      0      0      0   0
+FCD2A      0     55      6      0      0      0      0   0
+FCD2B      2      6     45      0      0      0      0   2
+FCD3A      0      0      0     16      0      0      0   0
+FCD3B      0      0      0      0     13      0      0   0
+FCD3C      0      0      0      0      0     20      0   0
+FCD3D      0      0      1      0      0      1     13   0
+PM         0      0      0      0      0      0      0  29
+
+PER-CLASS PERFORMANCE (OOB)
+--------------------------------------------------------------------------------
+FCD1A............... Accuracy: 0.7778 (27 samples)
+FCD2A............... Accuracy: 0.9016 (61 samples)
+FCD2B............... Accuracy: 0.8182 (55 samples)
+FCD3A............... Accuracy: 1.0000 (16 samples)
+FCD3B............... Accuracy: 1.0000 (13 samples)
+FCD3C............... Accuracy: 1.0000 (20 samples)
+FCD3D............... Accuracy: 0.8667 (15 samples)
+PM.................. Accuracy: 1.0000 (29 samples)
+
+HYPERPARAMETERS ACROSS ALL FOLDS
+--------------------------------------------------------------------------------
+   Fold  n_estimators  ...        class_weight  bootstrap
+0     1           300  ...                None       True
+1     2           200  ...  balanced_subsample       True
+2     3          1000  ...                None       True
+3     4          1000  ...            balanced       True
+4     5          1000  ...            balanced       True
+
+[5 rows x 11 columns]
+
+================================================================================
+END OF SUMMARY
+================================================================================

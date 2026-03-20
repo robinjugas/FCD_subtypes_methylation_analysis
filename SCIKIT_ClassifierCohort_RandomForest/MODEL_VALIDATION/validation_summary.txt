@@ -1,0 +1,41 @@
+VALIDATION COHORT SUMMARY
+================================================================================
+Accuracy: 0.9333
+N samples: 30
+
+Class distribution:
+FCD2B    7
+FCD2A    7
+PM       4
+FCD1A    3
+FCD3C    3
+FCD3A    2
+FCD3B    2
+FCD3D    2
+Name: count, dtype: int64
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       FCD1A       1.00      1.00      1.00         3
+       FCD2A       0.88      1.00      0.93         7
+       FCD2B       0.86      0.86      0.86         7
+       FCD3A       1.00      1.00      1.00         2
+       FCD3B       1.00      1.00      1.00         2
+       FCD3C       1.00      1.00      1.00         3
+       FCD3D       1.00      1.00      1.00         2
+          PM       1.00      0.75      0.86         4
+
+    accuracy                           0.93        30
+   macro avg       0.97      0.95      0.96        30
+weighted avg       0.94      0.93      0.93        30
+
+Confusion Matrix:
+[[3 0 0 0 0 0 0 0]
+ [0 7 0 0 0 0 0 0]
+ [0 1 6 0 0 0 0 0]
+ [0 0 0 2 0 0 0 0]
+ [0 0 0 0 2 0 0 0]
+ [0 0 0 0 0 3 0 0]
+ [0 0 0 0 0 0 2 0]
+ [0 0 1 0 0 0 0 3]]

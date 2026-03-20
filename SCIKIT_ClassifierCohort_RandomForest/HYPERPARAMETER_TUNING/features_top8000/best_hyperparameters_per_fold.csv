@@ -1,0 +1,6 @@
+Fold,n_estimators,min_samples_split,min_samples_leaf,min_impurity_decrease,max_leaf_nodes,max_features,max_depth,criterion,class_weight,bootstrap
+1,300,5,1,0.01,50.0,0.3,50.0,gini,,True
+2,200,10,4,0.0,,sqrt,30.0,gini,balanced_subsample,True
+3,1000,5,1,0.01,50.0,0.3,10.0,entropy,,True
+4,1000,5,8,0.0,50.0,0.5,,entropy,balanced,True
+5,1000,2,8,0.01,50.0,0.7,,gini,balanced,True
